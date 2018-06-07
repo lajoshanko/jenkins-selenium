@@ -12,7 +12,7 @@ node("master") {
 
     stage ('Run tests'){
         stage('Checkout the test repo') {
-            git 'https://lajos.hanko@bitbucket.icellmobilsoft.hu/scm/nejp/nejp-frontend-test.git'
+            git branch: 'master', credentialsId: 'bitbucket', url: 'https://lajos.hanko@bitbucket.icellmobilsoft.hu/scm/nejp/nejp-frontend-test.git'
         }
         stage('Run the tests') {
             sh 'mvn -B clean test'
