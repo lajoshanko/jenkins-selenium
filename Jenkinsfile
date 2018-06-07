@@ -6,7 +6,7 @@ node("master") {
         }
         stage('Run docker compose up') {
             sh 'sudo dockerd &'
-            sh 'sudp docker-compose up -d'
+            sh 'sudo docker-compose up -d'
         }
     }
 
