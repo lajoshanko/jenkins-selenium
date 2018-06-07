@@ -5,7 +5,7 @@ node("master") {
           git 'https://github.com/lajoshanko/jenkins-selenium.git'
         }
         stage('Run docker compose up') {
-            sh 'sudo service docker start'
+            sh 'sudo dockerd'
             sh 'docker-compose up -d'
         }
     }
