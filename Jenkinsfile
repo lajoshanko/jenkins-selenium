@@ -2,7 +2,7 @@ node("master") {
 
     stage('Preps') {
         stage('Checkout docker compose file') {
-          git 'https://github.com/lajoshanko/jenkins-selenium/blob/master/docker-compose.yml'
+          git 'https://github.com/lajoshanko/jenkins-selenium.git'
         }
         stage('Run docker compose up') {
             sh 'docker-compose up -d'
